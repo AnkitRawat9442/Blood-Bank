@@ -1,0 +1,122 @@
+
+<div class="container mb-md-4 mb-sm-2">
+    <div class="row mt-md-5 mt-sm-2">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body shadow-lg p-3 mb-md-5 mb-2 bg-body rounded  ">
+                <%- include('partials/message.ejs') %>
+                <form action="/register" method="post">
+                  
+                        
+                    <h2 class="text-center text-danger" style="display: flex; align-items: center; justify-content: center; padding: 2px; "><svg style="margin-right: 5px;" xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                      </svg> Register</h2>
+
+                    <div class="from-group m-2">
+                        <label for="name">Name</label>
+                        <input type="name" id="name" name="name" class="form-control" placeholder="Enter Name"
+                            value="<%= typeof name !== 'undefined' ? name : ''%>" >
+                    </div>
+                    <div class="form-group m-2">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"
+                            value="<%= typeof email !== 'undefined' ? email :''%>" >
+    
+                    </div>
+                    <div class="form-group m-2">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control"
+                        value="<%= typeof password !== 'undefined' ? password : ''%>" >
+    
+                    </div>
+                    <div class="form-group m-2">
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" id="password2" name="password2" class="form-control"
+                        value="<%= typeof password2 !== 'undefined' ? password2 : ''%>" >
+    
+                    </div>
+                     <div  class="form-group m-2" >
+                                        <label for="inputBLDGRP" class="d-flex justify-content-start m-2" ">Blood Group</label>
+                                        <select id="inputBLDGRP" class="form-select" name ="bloodgroup">
+                                          <option selected>Choose...</option>
+                                          <option>A</option>
+                                          <option>A+</option>
+                                          <option>B</option>
+                                          <option>B+</option>
+                                          <option>O</option>
+                                          <option>O+</option>
+                                        </select>
+                                      </div>
+                                      <div  class="form-group m-2" >
+                                        <label for="inputState" class="d-flex justify-content-start m-2" >State</label>
+                                        <select id="inputState" class="form-select" name ="State" 
+                                        value="<%= typeof State !== 'undefined' ? State : ''%>" >
+                                          <option selected>Choose...</option>
+                                          <option value="AN">Andaman and Nicobar Islands</option>
+                                          <option value="AP">Andhra Pradesh</option>
+                                          <option value="AR">Arunachal Pradesh</option>
+                                          <option value="AS">Assam</option>
+                                          <option value="BR">Bihar</option>
+                                          <option value="CH">Chandigarh</option>
+                                          <option value="CT">Chhattisgarh</option>
+                                          <option value="DN">Dadra and Nagar Haveli</option>
+                                          <option value="DD">Daman and Diu</option>
+                                          <option value="DL">Delhi</option>
+                                          <option value="GA">Goa</option>
+                                          <option value="GJ">Gujarat</option>
+                                          <option value="HR">Haryana</option>
+                                          <option value="HP">Himachal Pradesh</option>
+                                          <option value="JK">Jammu and Kashmir</option>
+                                          <option value="JH">Jharkhand</option>
+                                          <option value="KA">Karnataka</option>
+                                          <option value="KL">Kerala</option>
+                                          <option value="LA">Ladakh</option>
+                                          <option value="LD">Lakshadweep</option>
+                                          <option value="MP">Madhya Pradesh</option>
+                                          <option value="MH">Maharashtra</option>
+                                          <option value="MN">Manipur</option>
+                                          <option value="ML">Meghalaya</option>
+                                          <option value="MZ">Mizoram</option>
+                                          <option value="NL">Nagaland</option>
+                                          <option value="OR">Odisha</option>
+                                          <option value="PY">Puducherry</option>
+                                          <option value="PB">Punjab</option>
+                                          <option value="RJ">Rajasthan</option>
+                                          <option value="SK">Sikkim</option>
+                                          <option value="TN">Tamil Nadu</option>
+                                          <option value="TG">Telangana</option>
+                                          <option value="TR">Tripura</option>
+                                          <option value="UP">Uttar Pradesh</option>
+                                          <option value="UT">Uttarakhand</option>
+                                        </select>
+                                      </div>
+                                      <div class=" form-group m-2 mt-2 mb-3">
+                                        <label for="district" class="d-flex justify-content-start m-2" >District</label>
+                                        <input type="text" class="form-control" id="district"  name ="district" placeholder="District"
+                                        value="<%= typeof district !== 'undefined' ? district : ''%>" >
+                                       
+                                      </div>
+                                      
+                    <div class="form-group m-2 text-center ">
+                        <button type="submit" class="btn btn-primary bg-danger  mb-2  w-75 " >Register</button>
+                        </div>
+                </form>
+                <p class="text-muted mt-4">Have An Account ? <a href="/" class=" ms-1 text-danger text-decoration-none"><b>Login</b></a></p>
+                <div class="mt-3 mb-3 text-center w-100 text-muted">&copy; 2021–2024</div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+     
+   <footer class="px-3 " >
+  
+    <a href="admin//Admin-dashboard" class=" lead text-decoration-none text-muted "></a>
+    <p class="text-muted ">Copyright ©2022 All rights reserved by :
+      <a href="https://www.linkedin.com/in/ankit-rawat-2397791bb/" target="_blank"
+          style="text-decoration: none;" class="text-decoration-none text-muted ">
+        Ankit Rawat </a>
+       </p>
+       </footer>

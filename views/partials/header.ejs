@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg bg-light navbar-light py-4  ">
+    <div class="container   ">
+        <a href="/user/user-dashboard" class="navbar-brand fs-1 ">raktdaan</a>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-lg-5  " style="width: 100%;">
+                <li class="nav-item ">
+                    <a href="/user/donateblood" class="nav-link  ">DONATE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/user/findblood" class="nav-link">FIND-BLOOD</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#learn" class="nav-link">LEARN</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">AROUND WORLD</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link ">BLOG</a>
+                </li>
+                <li class="nav-link ms-lg-auto">
+
+                    <div class="dropdown text-danger fs-5">
+                        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                            id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg class=" text-danger me-2" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg>
+                            <div class="text-danger"> <%= User_name %> </div>
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                          
+                           
+                            <li><a class="dropdown-item nav-link" href="/user/profile">Dashboard</a></li>
+                            <li> 
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" >Sign out</a></li>
+                        </ul>
+                    </div>
+              
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+
+    <!-- model for sig out  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+             
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Do you want to exit
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+              <a href="/user/user-logout" type="button" class="btn btn-danger">Yes</a>
+            </div>
+          </div>
+        </div>
+      </div>

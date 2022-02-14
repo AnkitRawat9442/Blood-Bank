@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title> <%- title %>  </title>
+    <style>
+      body{
+        background-image: url("/public/img/logbg.png");
+      }
+    </style>
+  </head>
+
+  <body>
+
+
+    <div class="  text-center text-sm-start my-auto ">
+  
+      <div class="d-sm-flex align-items-center justify-content-between ">
+         
+
+       
+     
+      
+     <%- body %>
+     
+    <div > <img src="/public/img/logbg.png" class="img-fluid w-75 mx-auto  d-md-block d-none " alt=""></div>
+    </div>
+
+</div>
+
+  
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+
+
+    
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    
+   <footer class="px-3 " >
+    <button  class="px-1 text-muted" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Admin
+    </button>
+    <a href="admin//Admin-dashboard" class=" lead text-decoration-none text-muted "></a>
+    <p class="text-muted ">Copyright ©2022 All rights reserved by :
+      <a href="https://www.linkedin.com/in/ankit-rawat-2397791bb/" target="_blank"
+          style="text-decoration: none;" class="text-decoration-none text-muted ">
+        Ankit Rawat </a>
+       </p>
+
+
+       <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+     
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/admin/Admin-dashboard" method="post" class="border border-secondary mt-2 py-4">
+
+                      
+          <h2 class="text-center text-danger "
+              style="display: flex; align-items: center; justify-content: center; padding: 2px; ">
+              <svg style="margin-right: 5px;" xmlns="http://www.w3.org/2000/svg"
+                  width="40" height="40" fill="currentColor"
+                  class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                  <path
+                      d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                  <path fill-rule="evenodd"
+                      d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+              </svg> Admin
+          </h2>
+
+          
+         
+          <div class="form-group m-2">
+              <label for="password"
+                  class="d-flex justify-content-start m-2">Password</label>
+              <input type="password" id="password" name="password" class="form-control"
+                  placeholder="Password" value="">
+
+          </div>
+         
+         
+            
+          <div class="form-group m-2 mt-2 text-center ">
+              <button type="submit" class="btn btn-danger  mb-2  "
+                  style="width: 100% ;">Log in </button>
+          </div>
+      </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
+

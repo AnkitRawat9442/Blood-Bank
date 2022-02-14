@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title><%= title %> ></title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand fs-3 ">raktdaan</a>
+            <svg class="text-light ms-auto mx-2" 
+            xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+            class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+        </svg>
+            <a href="/admin" class=" text-decoration-none  text-white  ">ADMIN </a>
+            <a href="/admin/exit"  class=" text-decoration-none bg-danger text-white mx-2 px-2 exit_btn">Exit </a>
+            <button class="btn " id="admin_menu_btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#Admin_menu_offcanvas" aria-controls="Admin_menu_offcanvas">
+             <span class="navbar-toggler-icon"></span>
+              </button>
+            
+
+        </div>
+    </nav>
+
+
+    
+<div class="offcanvas offcanvas-start" style="width: fit-content; height: fit-content;" tabindex="-1" id="Admin_menu_offcanvas" aria-labelledby="Admin_menu_offcanvasLabel">
+    <div class="offcanvas-header py-0 ">
+      <h5 class="offcanvas-title text-danger" id="Admin_menu_offcanvasLabel">Admin</h5>
+      <!-- <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+    </div> 
+    <div class="offcanvas-body mt-0">
+        <div class="  d-flex flex-column  " style="height: 100%;">
+            <a href="/admin/Admin-dashboard" class="text-decoration-none text-dark  py-2">HOME</a>
+            <a href="" class="text-decoration-none text-dark  py-2" >DONAR</a>                
+            <a href="" class="text-decoration-none text-dark  py-2">PATIENT</a>
+            <a href="/admin/blood_DONATE" class="text-decoration-none text-dark  py-2">DONATE REQUEST</a>  
+            <a href="/admin/blood_REQ" class="text-decoration-none text-dark  py-2">BLOOD REQUEST</a>
+       
+            <a href="" class="text-decoration-none text-dark  py-2">BLOOD STOCK</a>
+            <a href="/admin/exit"  class="  text-decoration-none bg-danger text-white mx-2 px-2 ">Exit </a>
+
+        </div>
+      
+    </div>
+  </div>
+
+  <section class="bg-blood p-lg-5 p-md-3 p-sm-2 ">
+    <div class="container ">
+        <div class="row d-flex align-items-center justify-content-between">
+            <div class="col-2  px-0" id="admin_menu">
+             <div class="  d-flex flex-column fs-5 justify-content-evenly" style="height: 100%;">
+                <a href="/admin/Admin-dashboard" class="text-decoration-none text-danger fw-bold  py-2">HOME</a>
+                <a href="" class="text-decoration-none text-danger fw-bold py-2" >DONAR</a>                
+                <a href="" class="text-decoration-none text-danger fw-bold  py-2">PATIENT</a>
+                <a href="/admin/blood_DONATE" class="text-decoration-none text-danger fw-bold  py-2">DONATE REQUEST</a>  
+                <a href="/admin/blood_REQ" class="text-decoration-none text-danger fw-bold  py-2">BLOOD REQUEST</a>
+            
+                <a href="" class="text-decoration-none text-danger fw-bold  py-2">BLOOD STOCK</a>
+                                     
+             </div>
+            </div>
+            <div class="col con-col ">
+                <div class=" container_grid ">
+                    <div class="grid_item">
+                        <div class="grid_icon "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                <path fill-rule="evenodd"
+                                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                            </svg></div>
+                        <div class="fw-bold">A+</div>
+                        <div class="text-danger fs-4">
+                            <%= grp_A_pos %>
+                        </div>
+                    </div>
+                    <div class="grid_item">
+                        <div class="grid_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                <path fill-rule="evenodd"
+                                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                            </svg></div>
+                        <div class="fw-bold">A-</div>
+                        <div class="text-danger fs-4">
+                            <%= grp_A_neg %>
+                        </div>
+                    </div>
+                    <div class="grid_item">
+                        <div class="grid_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                <path fill-rule="evenodd"
+                                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                            </svg></div>
+                        <div class="fw-bold">B+</div>
+                        <div class="text-danger fs-4">
+                            <%= grp_B_pos %>
+                        </div>
+                    </div>
+                    <div class="grid_item">
+                        <div class="grid_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                <path fill-rule="evenodd"
+                                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                            </svg></div>
+                        <div class="fw-bold">B-</div>
+                        <div class="text-danger fs-4">
+                            <%= grp_B_neg %>
+                        </div>
+                    </div>
+                    <div class="grid_item">
+                        <div class="grid_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                <path fill-rule="evenodd"
+                                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                            </svg></div>
+                        <div class="fw-bold">O+</div>
+                        <div class="text-danger fs-4">
+                            <%= grp_O_pos %>
+                        </div>
+                    </div>
+                    <div class="grid_item">
+                        <div class="grid_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                <path fill-rule="evenodd"
+                                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                            </svg></div>
+                        <div class="fw-bold">O-</div>
+                        <div class="text-danger fs-4">
+                            <%= grp_O_neg %>
+                        </div>
+                    </div>
+                    <div class="grid_item">
+                        <div class="grid_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                <path fill-rule="evenodd"
+                                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                            </svg></div>
+                        <div class="fw-bold">AB+</div>
+                        <div class="text-danger fs-4">
+                            <%= grp_AB_pos %>
+                        </div>
+                    </div>
+                    <div class="grid_item">
+                        <div class="grid_icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                <path fill-rule="evenodd"
+                                    d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                            </svg></div>
+                        <div class="fw-bold">AB-</div>
+                        <div class="text-danger fs-4">
+                            <%= grp_AB_neg %>
+                        </div>
+                    </div>
+                
+                </div>
+                
+            </div>
+            </div>
+        </div>
+
+
+    </section>
+
+<%- body %> 
+
+
+
+<%- include("../partials/footer") %> 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

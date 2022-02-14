@@ -1,0 +1,80 @@
+ <section>
+     <div class="conatiner">
+        
+                 <div class="card card-body py-2 p-2">
+                     <div class="d-flex  shadow ">
+                        <svg class=" mx-3  me-2" xmlns="http://www.w3.org/2000/svg" width="100" height="100"
+                        fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+                     <div class="ms-3 my-2" >
+                         <% USER %>  
+                         <p class="">Name : <%= USER.name %> <br>
+                          Blood Group : <%= USER.bloodgroup %> <br>
+                          District : <%= USER.district %> <br>
+                         
+                     </div>
+                     </div>
+                 </div>
+             </div>
+       
+ </section>
+
+
+ <div class="d-sm-flex justify-content-evenly m-sm-0 m-2 ">
+    <div class="card card-body">
+        <div class="d-flex flex-column align-items-center ">
+            <span>21</span>
+            <span>Pending Reuest</span>
+        </div>
+    </div>
+    <div class="card card-body">
+        <div class="d-flex flex-column align-items-center ">
+            <span>12</span>
+            <span>Accepted Reuest</span>
+        </div>
+    </div>
+    <div class="card card-body">
+        <div class="d-flex flex-column align-items-center ">
+            <span>56</span>
+            <span>Rejected Reuest</span>
+        </div>
+    </div>
+    </div>
+
+
+   <div class="container-fluid mt-5 shadow ">
+    <div class="row justify-content-center py-3 d-flex justify-content-evenly ">
+    
+   <div class="card  " style="width: 18rem;">
+    <img src="/public/img/donate.jpg" class="card-img-top " alt="..." height="200px" >
+    <div class="card-body">
+      <p class="card-text text-center" style="font-weight: bold;">
+        <a href="/user/donateblood" class="text-decoration-none text-danger ">
+              
+            <div class="m-2 fw-bold text-center">DONATE BLOOD </div>
+        </a></p>
+    </div>
+  </div>
+  
+  
+  <div class="card  " style="width: 18rem;">
+    <img src="/public/img/find.jpg" class="card-img-top   " alt="..." height="200px">
+    <div class="card-body">
+      <p class="card-text  text-center " style="font-weight: bold; ">
+        <a href="/user/findblood" class="text-decoration-none text-danger  " >
+           
+            <div class="m-2  fw-bold text-center">REQUEST FOR BLOOD </div>
+        </a>
+    </div>
+  </div>
+  
+  
+  
+  
+  </div>
+  </div>
+  </div>
+  

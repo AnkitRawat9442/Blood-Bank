@@ -1,0 +1,60 @@
+
+<div class="bg-danger text-center text-white py-1">
+    <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" style="stroke: white;" width="20" height="20" fill="currentColor" class="bi bi-person-check" viewBox="0 0 16 16">
+        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+        <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+      </svg>
+    <span class="fw-bold">  Online Donation Request</span>
+</div>
+
+<%- include('../partials/message.ejs') %>
+<div class="container my-md-5 my-1  " >
+    <div class="row ">
+        <div class="col-md-6 mx-auto  ">
+            
+<div class="card card-body  shadow-lg p-3 mb-md-5 mb-2 bg-body rounded ">
+    <div class="card-title text-danger text-start fs-5 mb-4 ">Donar Details</div>
+    <form action="" method="post" class=" shadow-lg p-3 ">
+     
+        <div class="form-group">
+        <label for="#bloodgroup"  class="form-label fw-bold" style="font-size: 1.1rem;" >Blood Group</label>
+        <select id="bloodgroup" class="form-select" name ="bloodgroup">
+            <option selected >Select Blood Group </option>
+            <option>A-</option>
+            <option>A+</option>
+            <option>B-</option>
+            <option>B+</option>
+            <option>O-</option>
+            <option>O+</option>
+            <option>AB-</option>
+            <option>AB+</option>
+          </select>
+      
+      </div>
+      <div class="form-group">
+        <label for="#bloodunit"  class="form-label fw-bold" style="font-size: 1.1rem;" >Blood Unit</label>
+        <input type="number" id="bloodunit" class="form-select" name ="bloodunit">
+           
+      </div>
+      <div class="form-group">
+        <label for="#gender"  class="form-label fw-bold" style="font-size: 1.1rem;" >Gender</label>
+        <select id="gender" class="form-select" name ="gender">
+            <option selected >Select Gender </option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+        <label for="#dob"  class="form-label fw-bold" style="font-size: 1.1rem;" >Date of Birth</label>
+        <input type="date" id="dob" name="dob" class="form-select"  >
+      </div>
+    <div class="text-center my-3">
+        <button class="btn btn-danger btn-md px-5 fs-5 shadow">Donate </button>
+    </div>
+    </form>
+</div>
+        </div>
+    </div>
+</div>
